@@ -35,8 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'CRM.apps.CrmConfig',
-    'KingAdmin'
+    'CRM',
+    'KingAdmin',
+    'Student',
 ]
 
 MIDDLEWARE = [

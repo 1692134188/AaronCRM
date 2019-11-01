@@ -1,8 +1,11 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import login,authenticate,logout
-def app_index(request):
+from KingAdmin import app_setup
+from KingAdmin.sites import site
+app_setup.kingadmin_auto_discover()
 
-    return render(request,'kingadmin/app_index.html')
+def app_index(request):
+    return render(request, 'kingadmin/app_index.html', {'site': site})
 # Create your views here.
 def acc_login(request):
     error_msg=""
