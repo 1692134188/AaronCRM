@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import login,authenticate,logout
 def app_index(request):
+
     return render(request,'kingadmin/app_index.html')
 # Create your views here.
 def acc_login(request):

@@ -19,5 +19,6 @@ from django.conf.urls import url,include
 from CRM import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^crm/', include('CRM.urls')),
     url(r'^kingadmin/',include('KingAdmin.urls'))
 ]
