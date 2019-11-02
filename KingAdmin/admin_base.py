@@ -1,2 +1,4 @@
 class BaseKingAdmin(object):
-    pass
+    list_display=[]
+    list_filter=[]
+    search_fields=[]

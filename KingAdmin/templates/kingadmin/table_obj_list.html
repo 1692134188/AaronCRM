@@ -7,22 +7,25 @@
     <div>
         <div>
             <form>
-
-                {% for filter_column in admin_class.list_filter %}
-                    {% build_filter_ele filter_column admin_class %}
-                {% endfor %}
-
-                <input type="submit" value="过滤">
+                {% if admin_class.list_filter %}
+                    {% for filter_column in admin_class.list_filter %}
+                        {% build_filter_ele filter_column admin_class %}
+                    {% endfor %}
+                    <input type="submit" value="过滤">
+                {% endif %}
             </form>
-
         </div>
 
         <table class="table table-striped">
             <thead>
             <tr>
-                {% for column in admin_class.list_display %}
-                    <th>{{ column }}</th>
-                {% endfor %}
+                {% if admin_class.list_display %}
+                    {% for column in admin_class.list_display %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                {% else %}
+                    <th>{% get_model_name admin_class %}</th>
+                {% endif %}
             </tr>
             </thead>
             <tbody>
@@ -31,6 +34,24 @@
             {% endfor %}
             </tbody>
         </table>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if querysets.has_previous %}
+                    <a href="?_page=1">&laquo; first</a>
+                    <a href="?_page={{ querysets.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ querysets.number }} of {{ querysets.paginator.num_pages }}.
+                </span>
+
+                {% if querysets.has_next %}
+                    <a href="?_page={{ querysets.next_page_number }}">next</a>
+                    <a href="?_page={{ querysets.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
     </div>
 
 {% endblock %}
