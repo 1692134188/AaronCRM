@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e912918-aeba-4748-a54b-ffa8acbdcf4f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/KingAdmin/admin_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/admin_base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KingAdmin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,34 +49,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            <state relative-caret-position="266">
+              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#!!top" />
                 <element signature="n#table#0;n#div#0;n#!!top" />
-                <element signature="e#1278#1285#0#HTML" expanded="true" />
-                <element signature="e#1692#1699#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-875">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="96" column="73" selection-start-line="96" selection-start-column="73" selection-end-line="96" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#203#2282#0" />
+                <element signature="e#2496#3107#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KingAdmin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="302">
               <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
@@ -105,6 +102,7 @@
       <find>kingadmin</find>
       <find>contacts</find>
       <find>page</find>
+      <find>_page</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -134,17 +132,17 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2f59475f-3978-4a9e-9f65-5f84164dc18a/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/KingAdmin/admin_base.py" />
-        <option value="$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py" />
-        <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html" />
         <option value="$PROJECT_DIR$/KingAdmin/views.py" />
+        <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html" />
+        <option value="$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-230" />
-    <option name="y" value="26" />
-    <option name="width" value="1297" />
-    <option name="height" value="1028" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="180" />
+    <option name="y" value="66" />
+    <option name="width" value="1765" />
+    <option name="height" value="1005" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -251,24 +249,24 @@
       <updated>1572512596173</updated>
       <workItem from="1572512621851" duration="147000" />
       <workItem from="1572512797870" duration="3686000" />
-      <workItem from="1572562148740" duration="36896000" />
+      <workItem from="1572562148740" duration="38085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40729000" />
+    <option name="totallyTimeSpent" value="41918000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="144" y="53" width="1412" height="804" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1508043" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1661743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24963072" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.4155496" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.06836461" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.07589286" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -283,7 +281,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297587" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.15817694" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17429838" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,33 +494,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        <state relative-caret-position="266">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding>
             <element signature="n#div#0;n#div#0;n#!!top" />
             <element signature="n#table#0;n#div#0;n#!!top" />
-            <element signature="e#1278#1285#0#HTML" expanded="true" />
-            <element signature="e#1692#1699#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-875">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KingAdmin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="302">
           <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="96" column="73" selection-start-line="96" selection-start-column="73" selection-end-line="96" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#203#2282#0" />
+            <element signature="e#2496#3107#0" />
           </folding>
         </state>
       </provider>

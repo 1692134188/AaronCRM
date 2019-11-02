@@ -76,3 +76,27 @@ def build_table_row(obj, admin_class):
         td_ele = "<td></td>" % obj
         ele += td_ele
     return mark_safe(ele)
+
+
+@register.simple_tag
+def render_paginator(querysets, admin_class, sorted_column):
+    ele = '''
+      <ul class="pagination">
+    '''
+    if querysets.paginator.page_range and querysets.number and querysets.number>1:
+        p_ele = '''<li class=""><a href="?_page=%s">%s</a></li>''' % ( querysets.number-1, '上一页')
+        ele += p_ele
+    for i in querysets.paginator.page_range:
+        if abs(querysets.number - i) < 3:  # display btn
+            active = ''
+            if querysets.number == i:  # current page
+                active = 'active'
+            p_ele = '''<li class="%s"><a href="?_page=%s">%s</a></li>''' % (active, i, i)
+            ele += p_ele
+
+    if querysets.paginator.page_range and querysets.number and querysets.has_next():
+        p_ele = '''<li class=""><a href="?_page=%s">%s</a></li>''' % (querysets.number+1, '下一页')
+        ele += p_ele
+    ele += "</ul>"
+
+    return mark_safe(ele)
