@@ -11,10 +11,9 @@ def app_index(request):
 
 def table_obj_list(request,app_name,model_name):
     # 取出指定model里的数据返回给前端
-
     admin_class = site.enabled_admins[app_name][model_name]
     querysets = admin_class.model.objects.all()
-    return render(request, 'kingadmin/table_obj_list.html', {'querysets': querysets})
+    return render(request, 'kingadmin/table_obj_list.html', {'querysets': querysets,'admin_class':admin_class})
 
 
 def acc_login(request):
