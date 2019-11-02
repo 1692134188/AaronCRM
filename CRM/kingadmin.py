@@ -1,10 +1,11 @@
 from KingAdmin import sites
 from KingAdmin.sites import site
+from KingAdmin.admin_base import BaseKingAdmin
 from CRM import models
 
 # Register your models here.
 print('crm kingadmin ............')
-class CustomerAdmin(sites.AdminSite):
+class CustomerAdmin(BaseKingAdmin):
     list_display = ['name','source','contact_type','contact','consultant','consult_content','status','date']
     list_filter = ['source','consultant','status','date']
     search_fields = ['contact','consultant__name']

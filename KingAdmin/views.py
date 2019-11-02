@@ -4,9 +4,19 @@ from KingAdmin import app_setup
 from KingAdmin.sites import site
 app_setup.kingadmin_auto_discover()
 
+
+# Create your views here.
 def app_index(request):
     return render(request, 'kingadmin/app_index.html', {'site': site})
-# Create your views here.
+
+def table_obj_list(request,app_name,model_name):
+    # 取出指定model里的数据返回给前端
+
+    admin_class = site.enabled_admins[app_name][model_name]
+    querysets = admin_class.model.objects.all()
+    return render(request, 'kingadmin/table_obj_list.html', {'querysets': querysets})
+
+
 def acc_login(request):
     error_msg=""
     if request.method=="POST":
