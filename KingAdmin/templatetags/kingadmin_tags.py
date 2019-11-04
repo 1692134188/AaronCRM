@@ -90,7 +90,7 @@ def render_paginator(querysets, admin_class, sorted_column):
         p_ele = '''<li class=""><a href="?_page=%s%s%s">%s</a></li>''' % (querysets.number - 1, filter_ele,sorted_ele, '上一页')
         ele += p_ele
     for i in querysets.paginator.page_range:
-        if abs(querysets.number - i) < 3:  # display btn
+        if abs(querysets.number - i) < admin_class.list_per_page:  # display btn
             active = ''
             if querysets.number == i:  # current page
                 active = 'active'

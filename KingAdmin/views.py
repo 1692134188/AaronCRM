@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from django.db.models import Q
 from KingAdmin import app_setup
 from KingAdmin.sites import site
+
 
 app_setup.kingadmin_auto_discover()
 
@@ -38,8 +40,19 @@ def get_orderby_result(request, querysets, admin_class):
         return querysets.order_by(orderby_key), current_orderd_column
     else:
         return querysets, current_orderd_column
+def get_serached_result(request, querysets, admin_class):
+    # Q1:此方法的作用是？
+    #   A1:根据搜索关键字进行过滤
+    search_key = request.GET.get("_q")
+    if  search_key:
+        q=Q()
+        q.connector="OR"
 
+        for search_field in admin_class.search_fields:
+            q.children.append(("%s__contains" % search_field, search_key))
 
+        return querysets.filter(q)
+    return querysets
 @login_required
 def table_obj_list(request, app_name, model_name):
     # 取出指定model里的数据返回给前端
@@ -49,6 +62,10 @@ def table_obj_list(request, app_name, model_name):
     querysets, filter_condtions = get_filter_result(request, querysets)
     # 把条件返回，下拉列表中选中的数据不会丢失
     admin_class.filter_condtions = filter_condtions
+    # 根据关键字段进行搜索
+    querysets = get_serached_result(request, querysets, admin_class)
+    admin_class.search_key = request.GET.get('_q', '')
+    print('_q',request.GET.get('_q', ''))
     # 获取排序
     querysets, sorted_column = get_orderby_result(request, querysets, admin_class)
 
