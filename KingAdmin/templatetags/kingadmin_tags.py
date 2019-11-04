@@ -148,3 +148,9 @@ def render_sorted_arrow(column,sorted_column):
 
         return mark_safe(ele)
     return ''
+
+@register.simple_tag
+def get_current_sorted_column_index(sorted_column):
+    # Q1:本方法的作用是？
+    #     A1:给隐藏域赋值，获取当前的排序字段，以便于过滤的时候保持“排序队形”
+    return list(sorted_column.values())[0] if sorted_column else ''
