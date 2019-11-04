@@ -61,7 +61,7 @@ def build_table_row(obj, admin_class):
     # A1：通过模板，将表中的记录生成相应的html元素
     ele = ""
     if admin_class.list_display:
-        for column_name in admin_class.list_display:
+        for index,column_name in enumerate(admin_class.list_display):
             column_obj = admin_class.model._meta.get_field(column_name)
             if column_obj.choices:
                 # 如果是枚举类型，需要将其转换成相应的汉字
@@ -69,9 +69,11 @@ def build_table_row(obj, admin_class):
             else:
                 column_date = getattr(obj, column_name)
             td_ele = "<td>%s</td>" % column_date
+            if index==0:
+                td_ele = "<td><a href='%s/change/'>%s</a></td>" % (obj.id,column_date)
             ele += td_ele
     else:
-        td_ele = "<td></td>" % obj
+        td_ele = "<td><a href='%s/change/'>%s</a></td>" % (obj.id, obj)
         ele += td_ele
     return mark_safe(ele)
 

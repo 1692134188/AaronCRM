@@ -3,9 +3,8 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db.models import Q
-from KingAdmin import app_setup
+from KingAdmin import app_setup,form_handle
 from KingAdmin.sites import site
-
 
 app_setup.kingadmin_auto_discover()
 
@@ -65,7 +64,6 @@ def table_obj_list(request, app_name, model_name):
     # 根据关键字段进行搜索
     querysets = get_serached_result(request, querysets, admin_class)
     admin_class.search_key = request.GET.get('_q', '')
-    print('_q',request.GET.get('_q', ''))
     # 获取排序
     querysets, sorted_column = get_orderby_result(request, querysets, admin_class)
 
@@ -75,6 +73,14 @@ def table_obj_list(request, app_name, model_name):
     querysets = paginator.get_page(page)
     return render(request, 'kingadmin/table_obj_list.html', {'querysets': querysets, 'admin_class': admin_class, 'sorted_column':sorted_column})
 
+@login_required
+def table_obj_change(request, app_name, model_name,obj_id):
+    # Q1:此方法的作用是？
+    #   A1:数据修改页面
+    admin_class = site.enabled_admins[app_name][model_name]
+    #通过动态生成的方式，生成model_form
+    model_form = form_handle.create_dynamic_model_form(admin_class)
+    return  render(request,'kingadmin/table_obj_change.html',locals())
 
 def acc_login(request):
     error_msg = ""
