@@ -18,12 +18,10 @@ def build_filter_ele(filter_column, admin_class):
                 #       admin_class.filter_condtions.get(filter_column))
                 if str(choice[0]) == admin_class.filter_condtions.get(filter_column):  # 当前值被选中了
                     selected = 'selected'
-                    print('selected......')
 
             option = "<option value='%s' %s>%s</option>" % (choice[0], selected, choice[1])
             filter_ele += option
     except AttributeError as e:
-        print("err", e)
         filter_ele = "<select name='%s__gte'>" % filter_column
         if column_obj.get_internal_type() in ('DateField', 'DateTimeField'):
             time_obj = datetime.datetime.now()
@@ -83,20 +81,70 @@ def render_paginator(querysets, admin_class, sorted_column):
     ele = '''
       <ul class="pagination">
     '''
-    if querysets.paginator.page_range and querysets.number and querysets.number>1:
-        p_ele = '''<li class=""><a href="?_page=%s">%s</a></li>''' % ( querysets.number-1, '上一页')
+    filter_ele = render_filtered_args(admin_class)
+    sorted_ele = ''
+    if sorted_column:
+        sorted_ele = '&_o=%s' % list(sorted_column.values())[0]
+    # 前一页
+    if querysets.paginator.page_range and querysets.number and querysets.number > 1:
+        p_ele = '''<li class=""><a href="?_page=%s%s%s">%s</a></li>''' % (querysets.number - 1, filter_ele,sorted_ele, '上一页')
         ele += p_ele
     for i in querysets.paginator.page_range:
         if abs(querysets.number - i) < 3:  # display btn
             active = ''
             if querysets.number == i:  # current page
                 active = 'active'
-            p_ele = '''<li class="%s"><a href="?_page=%s">%s</a></li>''' % (active, i, i)
+            p_ele = '''<li class="%s"><a href="?_page=%s%s%s">%s</a></li>''' % (active,i, filter_ele,sorted_ele, i)
             ele += p_ele
-
+    # 后一页
     if querysets.paginator.page_range and querysets.number and querysets.has_next():
-        p_ele = '''<li class=""><a href="?_page=%s">%s</a></li>''' % (querysets.number+1, '下一页')
+        p_ele = '''<li class=""><a href="?_page=%s%s%s">%s</a></li>''' % (querysets.number + 1, filter_ele,sorted_ele, '下一页')
         ele += p_ele
     ele += "</ul>"
 
     return mark_safe(ele)
+
+
+@register.simple_tag
+def get_sorted_column(column, sorted_column, forloop):
+    # Q1:本方法的作用是？
+    #     A1:生成url地址栏中的url链接，并处理1：升序降序问题
+    if column in sorted_column:
+        # 获取上一次排序顺序，本次取反
+        last_sort_index = sorted_column[column]
+        if last_sort_index.startswith("-"):
+            this_time_sort_index = last_sort_index.strip("-")
+        else:
+            this_time_sort_index = '-%s' % last_sort_index
+        return this_time_sort_index
+    else:
+        return forloop
+
+@register.simple_tag
+def render_filtered_args(admin_class,render_html=True):
+    # Q1:本方法的作用是？
+    #     A1:生成url地址栏中的url链接，保留原始的请求参数
+    if  admin_class.filter_condtions:
+        ele=''
+        for k,v in admin_class.filter_condtions.items():
+            ele+='&%s=%s' %(k,v)
+        if  render_html:
+            return mark_safe(ele)
+        else:
+            return ele
+    else:
+        return ''
+@register.simple_tag
+def render_sorted_arrow(column,sorted_column):
+    # Q1:本方法的作用是？
+    #     A1:渲染被排序的样式，加个箭头
+    if column in sorted_column:
+        last_sort_index = sorted_column[column]
+        if last_sort_index.startswith('-'):
+            arrow_direction = 'bottom'
+        else:
+            arrow_direction = 'top'
+        ele = '''<span class="glyphicon glyphicon-triangle-%s" aria-hidden="true"></span>''' % arrow_direction
+
+        return mark_safe(ele)
+    return ''
