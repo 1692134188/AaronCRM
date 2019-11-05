@@ -54,6 +54,11 @@ def build_filter_ele(filter_column, admin_class):
 def get_model_name(admin_class):
     return admin_class.model._meta.model_name.upper()
 
+@register.simple_tag
+def get_obj_field_val(form_obj,field):
+    # Q1:此方法的作用是什么？
+    #     A1：在修改页面，将某些无法修改的值转换成label标签
+    return getattr(form_obj.instance,field)
 
 @register.simple_tag
 def build_table_row(obj, admin_class):

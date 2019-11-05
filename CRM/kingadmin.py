@@ -10,6 +10,7 @@ class CustomerAdmin(BaseKingAdmin):
     list_filter = ['source','consultant','status','date']
     search_fields = ['contact','consultant__name']
     list_per_page = 3
+    readonly_fields = ['status','contact']
 
 site.register(models.CustomerInfo,CustomerAdmin)
 site.register(models.CustomerFollowUp)

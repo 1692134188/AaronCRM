@@ -56,7 +56,7 @@ def get_serached_result(request, querysets, admin_class):
 def table_obj_list(request, app_name, model_name):
     # 取出指定model里的数据返回给前端
     admin_class = site.enabled_admins[app_name][model_name]
-    querysets = admin_class.model.objects.all()
+    querysets = admin_class.model.objects.all().order_by('-id')
     # 拿到下拉列表中条件，对数据进行过滤，
     querysets, filter_condtions = get_filter_result(request, querysets)
     # 把条件返回，下拉列表中选中的数据不会丢失
@@ -91,7 +91,22 @@ def table_obj_change(request, app_name, model_name,obj_id):
            form_obj.save()
            return redirect("/kingadmin/%s/%s/" %(app_name,model_name))
     return  render(request,'kingadmin/table_obj_change.html',locals())
+@login_required
+def table_obj_add(request,app_name,model_name):
+    admin_class = site.enabled_admins[app_name][model_name]
+    model_form = form_handle.create_dynamic_model_form(admin_class,form_add=True)
+    print(1)
+    if request.method == "GET":
+        print(2)
+        form_obj = model_form()
+    elif request.method == "POST":
+        form_obj = model_form(data=request.POST)
+        if form_obj.is_valid():
+            print(3)
+            form_obj.save()
+            return redirect("/kingadmin/%s/%s/" % (app_name, model_name))
 
+    return render(request,'kingadmin/table_obj_add.html',locals())
 def acc_login(request):
     error_msg = ""
     if request.method == "POST":

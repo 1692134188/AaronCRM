@@ -1,0 +1,29 @@
+{% load kingadmin_tags %}
+
+<form class="form-horizontal" method="post"> {% csrf_token %}
+    {{ form_obj.errors }}
+    {% for field in form_obj %}
+        <div class="form-group">
+            <label class="col-sm-2 control-label">{{ field.label }}</label>
+            <div class="col-sm-10">
+                {{ field }}
+            </div>
+        </div>
+    {% endfor %}
+    {% if not admin_class.form_add %}
+        {# 如果是修改表单#}
+        {% for field in admin_class.readonly_fields %}
+            <div class="form-group">
+                <label class="col-sm-2 control-label">{{ field }}</label>
+                <div class="col-sm-10">
+                    <p>{% get_obj_field_val form_obj field %}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div class="form-group">
+        <div class="col-sm-offset-11 col-sm-2">
+            <button type="submit" class="btn btn-info">Save</button>
+        </div>
+    </div>
+</form>
