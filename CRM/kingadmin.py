@@ -15,11 +15,13 @@ class CustomerAdmin(BaseKingAdmin):
 
 site.register(models.CustomerInfo,CustomerAdmin)
 site.register(models.CustomerFollowUp)
-# site.register(models.ClassList)
-# site.register(models.Course)
-# site.register(models.Role)
-# site.register(models.Menus)
-# site.register(models.CourseRecord)
-# site.register(models.StudyRecord)
-# site.register(models.Student)
-# site.register(models.UserProfile)
+site.register(models.ClassList)
+site.register(models.Course)
+site.register(models.Role)
+site.register(models.Menus)
+site.register(models.CourseRecord)
+site.register(models.StudyRecord)
+site.register(models.Student)
+site.register(models.UserProfile)
+
+

@@ -4,7 +4,36 @@ import datetime, time
 
 register = Library()
 
+@register.simple_tag
+def display_all_related_objs(obj):
+    # Q1:此方法的作用是？
+    #   A1:数显示要被删除对象的所有关联对象
+    ele = "<ul>"
+    # 通过a._meta.related_objects可以获取反向关联
+    for reversed_fk_obj in obj._meta.related_objects:
+        related_table_name = reversed_fk_obj.name
+        # 通过表名_set()可以查找所有相关数据
+        related_lookup_key = "%s_set" % related_table_name
+        related_objs = getattr(obj, related_lookup_key).all()  # 反向查所有关联的数据
+        ele += "<li>%s <ul> " % related_table_name
 
+        if reversed_fk_obj.get_internal_type() == "ManyToManyField":  # 不需要深入查找
+            for i in related_objs:
+                ele += "<li><a href='/kingadmin/%s/%s/%s/change/'>%s</a> 记录里与[%s]相关的的数据将被删除</li>" \
+                       % (i._meta.app_label, i._meta.model_name, i.id, i, obj)
+        else:
+            for i in related_objs:
+                # ele += "<li>%s--</li>" %i
+                ele += "<li><a href='/kingadmin/%s/%s/%s/change/'>%s</a></li>" % (i._meta.app_label,
+                                                                                  i._meta.model_name,
+                                                                                  i.id, i)
+                ele += display_all_related_objs(i)
+
+        ele += "</ul></li>"
+
+    ele += "</ul>"
+
+    return ele
 @register.simple_tag
 def build_filter_ele(filter_column, admin_class):
     column_obj = admin_class.model._meta.get_field(filter_column)
