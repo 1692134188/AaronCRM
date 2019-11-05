@@ -13,9 +13,6 @@ def build_filter_ele(filter_column, admin_class):
         for choice in column_obj.get_choices():
             selected = ''
             if filter_column in admin_class.filter_condtions:  # 当前字段被过滤了
-                # print("filter_column", choice,
-                #       type(admin_class.filter_condtions.get(filter_column)),
-                #       admin_class.filter_condtions.get(filter_column))
                 if str(choice[0]) == admin_class.filter_condtions.get(filter_column):  # 当前值被选中了
                     selected = 'selected'
 
@@ -39,7 +36,6 @@ def build_filter_ele(filter_column, admin_class):
                 selected = ''
                 time_to_str = '' if not i[0] else "%s-%s-%s" % (i[0].year, i[0].month, i[0].day)
                 if "%s__gte" % filter_column in admin_class.filter_condtions:  # 当前字段被过滤了
-                    print('-------------gte')
                     if time_to_str == admin_class.filter_condtions.get("%s__gte" % filter_column):  # 当前值被选中了
                         selected = 'selected'
                 option = "<option value='%s' %s>%s</option>" % \
@@ -48,7 +44,6 @@ def build_filter_ele(filter_column, admin_class):
 
     filter_ele += "</select>"
     return mark_safe(filter_ele)
-
 
 @register.simple_tag
 def get_model_name(admin_class):
@@ -82,7 +77,6 @@ def build_table_row(obj, admin_class):
         ele += td_ele
     return mark_safe(ele)
 
-
 @register.simple_tag
 def render_paginator(querysets, admin_class, sorted_column):
     ele = '''
@@ -110,7 +104,6 @@ def render_paginator(querysets, admin_class, sorted_column):
     ele += "</ul>"
 
     return mark_safe(ele)
-
 
 @register.simple_tag
 def get_sorted_column(column, sorted_column, forloop):
@@ -161,3 +154,24 @@ def get_current_sorted_column_index(sorted_column):
     # Q1:本方法的作用是？
     #     A1:给隐藏域赋值，获取当前的排序字段，以便于过滤的时候保持“排序队形”
     return list(sorted_column.values())[0] if sorted_column else ''
+
+@register.simple_tag
+def get_available_m2m_data(field_name,form_obj,admin_class):
+    # Q1:本方法的作用是？
+    #     A1:给句当前字段名field_name，当前实体form_obj，和admin_class 获取未选中的多对多字段
+    field_obj = admin_class.model._meta.get_field(field_name)
+    obj_list = set(field_obj.related_model.objects.all())#根据字段名，获取该表中的所有记录
+    select_data = []
+    try:
+        select_data = set(getattr(form_obj.instance,field_name).all())#获取到已经选中的数据
+    except:
+        pass
+    return obj_list-select_data
+
+@register.simple_tag
+def get_selected_m2m_data(field_name,form_obj,admin_class):
+    # Q1:本方法的作用是？
+    #     A1:给句当前字段名field_name，当前实体form_obj，和admin_class 获取已选中的多对多字段
+    select_data = set(getattr(form_obj.instance, field_name).all())  # 获取到已经选中的数据
+    return select_data
+

@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e912918-aeba-4748-a54b-ffa8acbdcf4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change_component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRM/kingadmin.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/kingadmin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KingAdmin/admin_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/admin_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KingAdmin/form_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/form_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change.html" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change_component.html" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change_component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KingAdmin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KingAdmin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/KingAdmin/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,64 +52,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+            <state relative-caret-position="566">
+              <caret line="168" selection-start-line="168" selection-end-line="168" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <element signature="e#2343#2392#0" />
+                <element signature="e#2459#3070#0" />
+                <element signature="e#3159#3987#0" />
+                <element signature="e#4031#4419#0" />
+                <element signature="e#4516#4834#0" />
+                <element signature="e#4889#5295#0" />
+                <element signature="e#5633#5741#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KingAdmin/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KingAdmin/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="102" column="48" lean-forward="true" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-                <element signature="e#766#1326#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KingAdmin/form_handle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change_component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_add.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -126,6 +73,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change_component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CRM/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="64" column="13" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#458#628#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,7 +120,6 @@
       <find>list_diplay</find>
       <find>get_sorted_column</find>
       <find>model</find>
-      <find>print</find>
       <find>get_orderby_result</find>
       <find>render_paginator</find>
       <find>sorted_column</find>
@@ -167,8 +135,11 @@
       <find>right</find>
       <find>get_model_name</find>
       <find>table_obj_list</find>
-      <find>get</find>
       <find>form_obj</find>
+      <find>get</find>
+      <find>print</find>
+      <find>student</find>
+      <find>Student</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -198,21 +169,21 @@
         <option value="$PROJECT_DIR$/KingAdmin/urls.py" />
         <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html" />
         <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_add.html" />
-        <option value="$PROJECT_DIR$/KingAdmin/admin_base.py" />
-        <option value="$PROJECT_DIR$/CRM/kingadmin.py" />
         <option value="$PROJECT_DIR$/KingAdmin/form_handle.py" />
-        <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change_component.html" />
-        <option value="$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py" />
         <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change.html" />
         <option value="$PROJECT_DIR$/KingAdmin/views.py" />
+        <option value="$PROJECT_DIR$/CRM/kingadmin.py" />
+        <option value="$PROJECT_DIR$/KingAdmin/admin_base.py" />
+        <option value="$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py" />
+        <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change_component.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-9" />
-    <option name="y" value="27" />
-    <option name="width" value="1435" />
-    <option name="height" value="1003" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-245" />
+    <option name="y" value="120" />
+    <option name="width" value="1368" />
+    <option name="height" value="895" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -237,31 +208,6 @@
               <item name="AaronCRM" type="b2602c69:ProjectViewProjectNode" />
               <item name="AaronCRM" type="462c0819:PsiDirectoryNode" />
               <item name="KingAdmin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="KingAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="statics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="KingAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="KingAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="kingadmin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AaronCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="KingAdmin" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -340,24 +286,24 @@
       <workItem from="1572512621851" duration="147000" />
       <workItem from="1572512797870" duration="3686000" />
       <workItem from="1572562148740" duration="38685000" />
-      <workItem from="1572834504137" duration="25543000" />
+      <workItem from="1572834504137" duration="33018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68061000" />
+    <option name="totallyTimeSpent" value="75536000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="22" width="1148" height="802" extended-state="1" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22568807" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24061662" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24963072" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.4155496" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.48656717" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.5107239" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -409,9 +355,6 @@
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KingAdmin/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://2f59475f-3978-4a9e-9f65-5f84164dc18a/schema/main/table/auth_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -537,16 +480,6 @@
     <entry file="file://$PROJECT_DIR$/KingAdmin/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRM/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" selection-start-line="15" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://2f59475f-3978-4a9e-9f65-5f84164dc18a/schema/main/table/CRM_customerinfo">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="5c44c0f9-c333-4035-bb2d-a4d2aee29560">
@@ -600,47 +533,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRM/kingadmin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KingAdmin/admin_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="n#thead#0;n#table#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KingAdmin/form_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#2343#2392#0" />
           </folding>
         </state>
       </provider>
@@ -656,10 +554,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change.html">
+    <entry file="file://$PROJECT_DIR$/KingAdmin/form_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KingAdmin/admin_base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM/kingadmin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -670,10 +585,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KingAdmin/templatetags/kingadmin_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="168" selection-start-line="168" selection-end-line="168" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#2343#2392#0" />
+            <element signature="e#2459#3070#0" />
+            <element signature="e#3159#3987#0" />
+            <element signature="e#4031#4419#0" />
+            <element signature="e#4516#4834#0" />
+            <element signature="e#4889#5295#0" />
+            <element signature="e#5633#5741#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KingAdmin/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change_component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="243">
+          <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#458#628#0" />
+          </folding>
         </state>
       </provider>
     </entry>

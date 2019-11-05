@@ -4,3 +4,4 @@ class BaseKingAdmin(object):
     search_fields=[] #搜索字段
     list_per_page=3  #显示页码数
     readonly_fields = []
+    filter_horizontal=[]

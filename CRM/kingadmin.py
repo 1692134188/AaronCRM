@@ -11,6 +11,7 @@ class CustomerAdmin(BaseKingAdmin):
     search_fields = ['contact','consultant__name']
     list_per_page = 3
     readonly_fields = ['status','contact']
+    filter_horizontal = ['consult_courses', ]
 
 site.register(models.CustomerInfo,CustomerAdmin)
 site.register(models.CustomerFollowUp)
