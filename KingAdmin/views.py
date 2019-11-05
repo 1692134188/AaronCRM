@@ -80,6 +80,16 @@ def table_obj_change(request, app_name, model_name,obj_id):
     admin_class = site.enabled_admins[app_name][model_name]
     #通过动态生成的方式，生成model_form
     model_form = form_handle.create_dynamic_model_form(admin_class)
+    obj = admin_class.model.objects.get(id=obj_id)
+    if request.method == "GET":
+        # 展示页面
+        form_obj = model_form(instance=obj)
+    else:
+        # 修改数据
+        form_obj = model_form(instance=obj,data=request.POST)
+        if form_obj.is_valid():
+           form_obj.save()
+           return redirect("/kingadmin/%s/%s/" %(app_name,model_name))
     return  render(request,'kingadmin/table_obj_change.html',locals())
 
 def acc_login(request):
