@@ -35,7 +35,7 @@ class CustomerInfo(models.Model):
                       (5, '其它'),
                       )
     source = models.SmallIntegerField(choices=source_choices)
-    referral_from = models.ForeignKey("self", blank=True, null=True, verbose_name="转介绍",on_delete=None)
+    referral_from = models.ForeignKey("self", blank=True, null=True, verbose_name="转介绍",on_delete=models.CASCADE)
     consult_courses = models.ManyToManyField("Course", verbose_name="咨询课程")
     consult_content = models.TextField(verbose_name="咨询内容")
     status_choices = ((0, '未报名'), (1, '已报名'), (2, '已退学'))

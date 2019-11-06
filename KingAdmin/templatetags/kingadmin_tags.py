@@ -8,7 +8,7 @@ register = Library()
 def display_all_related_objs(obj):
     # Q1:此方法的作用是？
     #   A1:数显示要被删除对象的所有关联对象
-    ele = "<ul>"
+    ele = "<ul><b style='color:red'>%s</b>" % obj
     # 通过a._meta.related_objects可以获取反向关联
     for reversed_fk_obj in obj._meta.related_objects:
         related_table_name = reversed_fk_obj.name

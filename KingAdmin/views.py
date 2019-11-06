@@ -59,13 +59,18 @@ def table_obj_list(request, app_name, model_name):
     # 判断是否是通过action来的
     if request.method=="POST":
         selected_action=request.POST.get("action")
-        print(11)
-        print(request.POST.get('selected_ids'))
         selected_ids = json.loads(request.POST.get('selected_ids'))
-        selected_objs=admin_class.model.objects.filter(id__in=selected_ids)
-        print("select_ids",selected_ids)
-        admin_action_func = getattr(admin_class,selected_action)
-        admin_action_func(request,selected_objs)
+        if selected_action:
+            #如果有action参数，表示这是一个正常的action，
+            selected_objs = admin_class.model.objects.filter(id__in=selected_ids)
+            admin_action_func = getattr(admin_class, selected_action)
+            response = admin_action_func(request, selected_objs)
+            if response:
+                return response
+        else:
+            # 如果没有代表可能是一个删除动作
+            if selected_ids:  # 这些选中的数据都要被删除
+                admin_class.model.objects.filter(id__in=selected_ids).delete()
 
     querysets = admin_class.model.objects.all().order_by('-id')
     # 拿到下拉列表中条件，对数据进行过滤，

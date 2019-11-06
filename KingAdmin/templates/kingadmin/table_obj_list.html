@@ -14,7 +14,7 @@
                 <input type="hidden" name="{{ k }}" value="{{ v }}">
             {% endfor %}
         </form>
-        <div class="row">
+        <div class="row" style="float: left">
             <form>
                 {% if admin_class.list_filter %}
                     {% for filter_column in admin_class.list_filter %}
@@ -25,8 +25,9 @@
                 {% endif %}
             </form>
         </div>
-        <form onsubmit="return ActionCheck(this)" method="post">{% csrf_token %}
-            <div class="row">
+        <div class="row">
+            <form onsubmit="return ActionCheck(this)" method="post">{% csrf_token %}
+
                 <div class="col-lg-3">
                     <select class="form-control" name="action">
                         <option value="">-----------</option>
@@ -38,8 +39,8 @@
                 <div class="col-lg-2">
                     <input type="submit" value="GO">
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
         <div>
             <a href="add/">添加</a>
         </div>
