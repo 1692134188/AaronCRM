@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 from django.db.models import Q
 from KingAdmin import app_setup,form_handle
 from KingAdmin.sites import site
-
+import json
 app_setup.kingadmin_auto_discover()
 
 
@@ -56,6 +56,17 @@ def get_serached_result(request, querysets, admin_class):
 def table_obj_list(request, app_name, model_name):
     # 取出指定model里的数据返回给前端
     admin_class = site.enabled_admins[app_name][model_name]
+    # 判断是否是通过action来的
+    if request.method=="POST":
+        selected_action=request.POST.get("action")
+        print(11)
+        print(request.POST.get('selected_ids'))
+        selected_ids = json.loads(request.POST.get('selected_ids'))
+        selected_objs=admin_class.model.objects.filter(id__in=selected_ids)
+        print("select_ids",selected_ids)
+        admin_action_func = getattr(admin_class,selected_action)
+        admin_action_func(request,selected_objs)
+
     querysets = admin_class.model.objects.all().order_by('-id')
     # 拿到下拉列表中条件，对数据进行过滤，
     querysets, filter_condtions = get_filter_result(request, querysets)
