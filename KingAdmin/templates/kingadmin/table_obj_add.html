@@ -2,13 +2,19 @@
 {% load kingadmin_tags %}
 
 {% block  right-content-container %}
-<h2 class="page-header">{% get_model_name admin_class %}</h2>
-<h4 class="page-header">添加{% get_model_name admin_class %}数据</h4>
+    <ol class="breadcrumb">
+        <li><a href="/kingadmin/">Home</a></li>
+        <li><a href="/kingadmin/{{ app_name }}">{{ app_name }}</a></li>
+        <li><a href="/kingadmin/{{ app_name }}/{{ model_name }}/">{% get_model_verbose_name admin_class %}</a></li>
+        <li class="active">Add {{ model_name }} </li>
+    </ol>
+    <h2 class="page-header">{% get_model_name admin_class %}</h2>
+    <h4 class="page-header">添加{% get_model_name admin_class %}数据</h4>
 
-<div>
+    <div>
 
-{% include 'kingadmin/table_obj_change_component.html' %}
+        {% include 'kingadmin/table_obj_change_component.html' %}
 
-</div>
+    </div>
 
 {% endblock %}

@@ -2,8 +2,11 @@
 {% load kingadmin_tags %}
 
 {% block  right-content-container %}
-    <h2 class="page-header">app</h2>
-
+    <ol class="breadcrumb">
+      <li><a href="/kingadmin/">Home</a></li>
+      <li><a href="/kingadmin/{{ app_name }}">{{ app_name }}</a></li>
+      <li class="active">{% get_model_verbose_name admin_class %}</li>
+    </ol>
     <div>
         <form>
             <input type="search" placeholder="{% for s in admin_class.search_fields %}{{ s }},{% endfor %}" name="_q"

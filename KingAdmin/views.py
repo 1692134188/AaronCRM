@@ -12,7 +12,8 @@ app_setup.kingadmin_auto_discover()
 # Create your views here.
 def app_index(request):
     return render(request, 'kingadmin/app_index.html', {'site': site})
-
+def model_obj_list(request,app_name):
+    return render(request, 'kingadmin/model_obj_list.html', {'site': site,"appname":app_name})
 
 def get_filter_result(request, querysets):
     filter_conditions = {}
@@ -87,7 +88,7 @@ def table_obj_list(request, app_name, model_name):
     paginator = Paginator(querysets, 5)  # 每页显示5条数据
     page = request.GET.get('_page')
     querysets = paginator.get_page(page)
-    return render(request, 'kingadmin/table_obj_list.html', {'querysets': querysets, 'admin_class': admin_class, 'sorted_column':sorted_column})
+    return render(request, 'kingadmin/table_obj_list.html', locals())
 
 @login_required
 def table_obj_change(request, app_name, model_name,obj_id):

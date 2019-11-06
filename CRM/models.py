@@ -46,6 +46,10 @@ class CustomerInfo(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "客户信息"
+        verbose_name_plural = "客户信息"
+
 class CustomerFollowUp(models.Model):
     """客户跟踪记录表"""
     customer = models.ForeignKey("CustomerInfo",on_delete=None)

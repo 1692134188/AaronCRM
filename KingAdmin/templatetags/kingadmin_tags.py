@@ -190,17 +190,24 @@ def get_available_m2m_data(field_name,form_obj,admin_class):
     #     A1:给句当前字段名field_name，当前实体form_obj，和admin_class 获取未选中的多对多字段
     field_obj = admin_class.model._meta.get_field(field_name)
     obj_list = set(field_obj.related_model.objects.all())#根据字段名，获取该表中的所有记录
-    select_data = []
-    try:
-        select_data = set(getattr(form_obj.instance,field_name).all())#获取到已经选中的数据
-    except:
-        pass
-    return obj_list-select_data
+    if form_obj.instance.id:
+        selected_data = set(getattr(form_obj.instance, field_name).all())
+
+        return obj_list - selected_data
+    else:
+        return obj_list
 
 @register.simple_tag
 def get_selected_m2m_data(field_name,form_obj,admin_class):
     # Q1:本方法的作用是？
     #     A1:给句当前字段名field_name，当前实体form_obj，和admin_class 获取已选中的多对多字段
-    select_data = set(getattr(form_obj.instance, field_name).all())  # 获取到已经选中的数据
-    return select_data
-
+    if form_obj.instance.id:
+        selected_data = getattr(form_obj.instance, field_name).all()
+        return selected_data
+    else:
+        return []
+@register.simple_tag
+def get_model_verbose_name(admin_class):
+    # Q1:本方法的作用是？
+    #     A1:获取表名的汉字展示，可用于面包屑、列表展示等
+    return admin_class.model._meta.verbose_name
