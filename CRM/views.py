@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 from CRM import models
 from CRM import forms
+from django import conf
 from django.utils.timezone import datetime
-
+import os,json
 # Create your views here.
 
 @login_required
@@ -59,4 +61,22 @@ def enrollment(request,enrollment_id):
         customer_form = forms.CustomerForm(instance=enrollment_obj.customer)
 
     return render(request,"crm/enrollment.html",locals())
+
+@csrf_exempt
+def enrollment_fileupload(request,enrollment_id):
+    print(request.FILES)
+    enrollment_upload_dir = os.path.join(conf.settings.CRM_FILE_UPLOAD_DIR,enrollment_id)
+    if not os.path.isdir(enrollment_upload_dir):
+        os.mkdir(enrollment_upload_dir)
+    file_obj = request.FILES.get('file')
+    if len(os.listdir(enrollment_upload_dir))<= 2:
+        with open(os.path.join(enrollment_upload_dir,file_obj.name), "wb") as f:
+            for chunks in file_obj.chunks():
+                f.write(chunks)
+
+    else:
+        return HttpResponse(json.dumps({'status':False, 'err_msg':'max upload limit is 2' }))
+    print(conf.settings.CRM_FILE_UPLOAD_DIR)
+    return HttpResponse(json.dumps({'status':True,  }))
+
 

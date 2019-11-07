@@ -118,5 +118,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'statics'),
     os.path.join(BASE_DIR, 'KingAdmin/statics'),
 )
+CRM_FILE_UPLOAD_DIR = os.path.join(BASE_DIR, 'CRM\\upload_files\\enrollment_data')

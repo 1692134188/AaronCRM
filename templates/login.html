@@ -1,5 +1,7 @@
-{% extends 'kingadmin/index.html' %}
+{% extends 'index.html' %}
 {% block extra-css %}
+
+
         <link href="/static/css/signin.css" rel="stylesheet">
 
 {% endblock %}
@@ -9,7 +11,7 @@
 <div class="container">
 
       <form class="form-signin" method="post">{% csrf_token %}
-        <h2 class="form-signin-heading">KingAdmin</h2>
+        <h2 class="form-signin-heading">Oldboy PerfectCRM</h2>
         <label for="inputEmail" class="sr-only">Username</label>
         <input type="text" id="" name="username" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
