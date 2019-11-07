@@ -41,6 +41,11 @@ class CustomerInfo(models.Model):
     status_choices = ((0, '未报名'), (1, '已报名'), (2, '已退学'))
     status = models.SmallIntegerField(choices=status_choices)
     consultant = models.ForeignKey("UserProfile", verbose_name="课程顾问",on_delete=None)
+    id_num = models.CharField(max_length=128, blank=True, null=True)
+    emergency_contact = models.PositiveIntegerField(blank=True, null=True)
+    sex_choices = ((0, '男'), (1, '女'))
+    sex = models.PositiveSmallIntegerField(choices=sex_choices, blank=True, null=True)
+
     date = models.DateField(auto_now_add=True)
 
     def __str__(self):
@@ -81,6 +86,7 @@ class ClassList(models.Model):
     class_type_choices = ((0, '脱产'), (1, '周末'), (2, '网络班'))
     class_type = models.SmallIntegerField(choices=class_type_choices, default=0)
     semester = models.SmallIntegerField(verbose_name="学期")
+    contract_template = models.ForeignKey("ContractTemplate", blank=True, null=True,on_delete=None)
     teachers = models.ManyToManyField("UserProfile", verbose_name="讲师")
     start_date = models.DateField("开班日期")
     graduate_date = models.DateField("毕业日期", blank=True, null=True)
@@ -168,3 +174,37 @@ class Menus(models.Model):
 
     class Meta:
         unique_together = ('name','url_name')
+
+class ContractTemplate(models.Model):
+    """存储合同模板"""
+    name = models.CharField(max_length=64)
+    content = models.TextField()
+    date = models.DateField(auto_now_add=True)
+
+class  StudentEnrollment(models.Model):
+    """学员报名表"""
+    customer = models.ForeignKey("CustomerInfo",on_delete=None)
+    class_grade = models.ForeignKey("ClassList",on_delete=None)
+    consultant = models.ForeignKey("UserProfile",on_delete=None)
+    contract_agreed = models.BooleanField(default=False)
+    contract_signed_date = models.DateTimeField(blank=True,null=True)
+    contract_approved = models.BooleanField(default=False)
+    contract_approved_date =  models.DateTimeField(verbose_name="合同审核时间", blank=True,null=True)
+
+    class Meta:
+        unique_together = ('customer','class_grade')
+
+    def __str__(self):
+        return "%s" % self.customer
+
+class PaymentRecord(models.Model):
+    """存储学员缴费记录"""
+    enrollment = models.ForeignKey(StudentEnrollment,on_delete=None)
+    payment_type_choices = ((0,'报名费'),(1,'学费'),(2,'退费'))
+    payment_type =  models.SmallIntegerField(choices=payment_type_choices,default=0)
+    amount = models.IntegerField("费用",default=500)
+    consultant = models.ForeignKey("UserProfile",on_delete=None)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "%s" % self.enrollment
