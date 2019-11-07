@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+{% block extra-css %}
+    <link href="/static/plugins/dropzone/dropzone.css" rel="stylesheet">
+
+
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h3>老男孩IT教育|学员报名</h3>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">学员在线报名</h3>
+            </div>
+            <div class="panel-body">
+                <form class="form" method="post" onsubmit="return BeforeFormSubmit(this)"> {% csrf_token %}
+                    {{ customer_form.errors }}
+                    {% for field in customer_form %}
+                        <div class="form-group col-lg-6">
+                            <label class="col-sm-2  control-label">{{ field.label }}</label>
+                            <div class="col-sm-10">
+                                {{ field }}
+                                <span style="color: red;">{{ field.errors.0 }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <div class="form-group col-lg-6">
+                        <label class="col-sm-2  control-label">报名班级</label>
+                        <div class="col-sm-10">
+                            {{ enrollment_obj.class_grade }}
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label class="col-sm-2  control-label">学费</label>
+                        <div class="col-sm-10">
+                            {{ enrollment_obj.class_grade.course.price }}
+                        </div>
+                    </div>
+
+                    <hr>
+                 <pre style="height: 400px;">{{ enrollment_obj.class_grade.contract_template.content }}</pre>
+
+                 <input type="checkbox" name="contract_agreed" >我已认真阅读,无条件同意
+
+                 <input type="submit"   class="btn btn-success" value="提交">
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function BeforeFormSubmit(ele) {
+            $(":disabled").removeAttr("disabled");
+
+
+            if (!$("input[name='contract_agreed']").prop("checked")) {
+                alert("必须勾选不退费协议!")
+                return false
+            }
+            //return false;
+        }
+
+    </script>
+{% endblock %}

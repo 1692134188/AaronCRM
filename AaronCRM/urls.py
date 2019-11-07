@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url,include
-from CRM import views
+from AaronCRM import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^crm/', include('CRM.urls')),
-    url(r'^kingadmin/',include('KingAdmin.urls'))
+    url(r'^kingadmin/',include('KingAdmin.urls')),
+    url(r'^login/',views.acc_login ),
+    url(r'^logout/',views.acc_logout,name="logout" ),
 ]
