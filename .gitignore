@@ -2,3 +2,4 @@ venv/Lib/site-packages/django/conf/locale/bs/__pycache__/
 venv/Lib/site-packages/django/conf/__pycache__/
 *.pyc
 db.sqlite3
+CRM/upload_files/

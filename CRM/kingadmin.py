@@ -15,6 +15,9 @@ class CustomerAdmin(BaseKingAdmin):
     actions=['change_status']
     def change_status(self,request,querysets):
         querysets.update(status=0)
+
+class StudentAdmin(BaseKingAdmin):
+    filter_horizontal = ['class_grades']
 site.register(models.CustomerInfo,CustomerAdmin)
 site.register(models.CustomerFollowUp)
 site.register(models.ClassList)
@@ -23,7 +26,7 @@ site.register(models.Role)
 site.register(models.Menus)
 site.register(models.CourseRecord)
 site.register(models.StudyRecord)
-site.register(models.Student)
+site.register(models.Student,StudentAdmin)
 site.register(models.UserProfile)
 
 

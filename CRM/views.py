@@ -5,6 +5,7 @@ from CRM import models
 from CRM import forms
 from django import conf
 from django.utils.timezone import datetime
+from django.db.utils import IntegrityError
 import os,json
 # Create your views here.
 
@@ -25,20 +26,19 @@ def stu_enrollment(request):
         class_grade_id = request.POST.get("class_grade_id")
         try:
             enrollment_obj = models.StudentEnrollment.objects.create(
-                customer_id=customer_id,
-                class_grade_id=class_grade_id,
-                consultant_id=request.user.userprofile.id,
+                customer_id = customer_id,
+                class_grade_id= class_grade_id,
+                consultant_id = request.user.userprofile.id,
+
             )
-        except InterruptedError as e:
-            # 已经生成过报名表了
-            enrollment_obj = models.StudentEnrollment.objects.get(customer_id=customer_id,
-                                                                  class_grade_id=class_grade_id, )
+        except IntegrityError as e: #已经生成过报名表了
+            enrollment_obj = models.StudentEnrollment.objects.get(customer_id = customer_id,class_grade_id= class_grade_id,)
             if enrollment_obj.contract_agreed:
                 return redirect("/crm/stu_enrollment/%s/contract_audit/" % enrollment_obj.id)
-        enrollment_link = "http://localhost:8000/crm/enrollment/%s/" % enrollment_obj.id
 
-    return render(request, 'crm/stu_enrollment.html', locals())
+        enrollment_link = "http://localhost:8000/crm/enrollment/%s/" %enrollment_obj.id
 
+    return render(request,'crm/stu_enrollment.html',locals())
 
 @login_required
 def enrollment(request,enrollment_id):
@@ -56,11 +56,31 @@ def enrollment(request,enrollment_id):
             enrollment_obj.contract_signed_date=datetime.now()
             enrollment_obj.save()
             return HttpResponse("您已成功提交报名信息,请等待审核通过,欢迎加入打死都不退费老男孩教育!")
+    else:
+        customer_form = forms.CustomerForm(instance=enrollment_obj.customer)
+    return render(request,"crm/enrollment.html",locals())
+
+@login_required
+def contract_audit(request,enrollment_id):
+    # Q1：此方法的作用是什么？
+    #     A1:创建一个学生合同审核页面
+    enrollment_obj = models.StudentEnrollment.objects.get(id=enrollment_id)
+    if request.method == "POST":
+        print(request.POST)
+        enrollment_form = forms.EnrollmentForm(instance=enrollment_obj,data=request.POST)
+        if enrollment_form.is_valid():
+            enrollment_form.save()
+            stu_obj = models.Student.objects.get_or_create(customer=enrollment_obj.customer)[0]
+            stu_obj.class_grades.add(enrollment_obj.class_grade_id)
+            stu_obj.save()
+            enrollment_obj.customer.status = 1
+            enrollment_obj.save()
+            return redirect("/kingadmin/CRM/customerinfo/%s/change/" % enrollment_obj.customer.id)
 
     else:
         customer_form = forms.CustomerForm(instance=enrollment_obj.customer)
-
-    return render(request,"crm/enrollment.html",locals())
+        enrollment_form = forms.EnrollmentForm(instance=enrollment_obj)
+    return render(request,"crm/contract_audit.html", locals())
 
 @csrf_exempt
 def enrollment_fileupload(request,enrollment_id):

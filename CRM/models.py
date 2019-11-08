@@ -77,8 +77,7 @@ class Student(models.Model):
     class_grades = models.ManyToManyField("ClassList")
 
     def __str__(self):
-        return self.customer
-
+        return "%s" % self.customer
 class ClassList(models.Model):
     """班级列表"""
     branch = models.ForeignKey("Branch",on_delete=None)
