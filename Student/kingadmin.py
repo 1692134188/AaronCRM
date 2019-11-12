@@ -4,4 +4,4 @@ from KingAdmin.admin_base import BaseKingAdmin
 from Student import models
 
 
-site.register(models.Test)
+site.register(models.Account)
