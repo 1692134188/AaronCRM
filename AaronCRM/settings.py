@@ -74,6 +74,7 @@ WSGI_APPLICATION = 'AaronCRM.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+#
 
 DATABASES = {
     'default': {
@@ -102,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
-
+AUTH_USER_MODEL = 'CRM.UserProfile'
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'

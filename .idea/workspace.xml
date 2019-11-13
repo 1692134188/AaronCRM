@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e912918-aeba-4748-a54b-ffa8acbdcf4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/crm/contract_audit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2f59475f-3978-4a9e-9f65-5f84164dc18a.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/kingadmin.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/kingadmin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AaronCRM/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AaronCRM/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRM/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRM/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CRM/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRM/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,16 +31,16 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
@@ -50,69 +50,20 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="AaronCRM" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/crm/enrollment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CRM/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CRM/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Student/kingadmin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CRM/kingadmin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CRM/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+            <state>
+              <caret selection-end-line="83" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#278#1108#0" />
+                <element signature="e#1170#2341#0" />
                 <element signature="e#458#628#0" />
               </folding>
             </state>
@@ -120,34 +71,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/crm/stu_enrollment.html">
+        <entry file="file://$PROJECT_DIR$/AaronCRM/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="20" column="53" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="53" />
+            <state relative-caret-position="264">
+              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CRM/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="225">
+              <caret line="51" column="27" lean-forward="true" selection-end-line="130" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27" />
           </provider>
         </entry>
       </file>
@@ -163,10 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>table_obj_list</find>
-      <find>form_obj</find>
-      <find>get</find>
-      <find>student</find>
       <find>Student</find>
       <find>print</find>
       <find>admin_action_func</find>
@@ -193,6 +129,10 @@
       <find>extra-css</find>
       <find>readonly_fields</find>
       <find>kingadmin</find>
+      <find>bstract</find>
+      <find>has_</find>
+      <find>MAIN</find>
+      <find>class Meta</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -215,7 +155,6 @@
         <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/app_index.html" />
         <option value="$PROJECT_DIR$/KingAdmin/sites.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2f59475f-3978-4a9e-9f65-5f84164dc18a/console.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/KingAdmin/form_handle.py" />
         <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_delete.html" />
         <option value="$PROJECT_DIR$/KingAdmin/admin_base.py" />
@@ -228,26 +167,28 @@
         <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change_component.html" />
         <option value="$PROJECT_DIR$/KingAdmin/templates/kingadmin/table_obj_change.html" />
         <option value="$PROJECT_DIR$/templates/crm/stu_enrollment.html" />
-        <option value="$PROJECT_DIR$/CRM/admin.py" />
         <option value="$PROJECT_DIR$/AaronCRM/views.py" />
         <option value="$PROJECT_DIR$/AaronCRM/urls.py" />
         <option value="$PROJECT_DIR$/templates/crm/enrollment.html" />
-        <option value="$PROJECT_DIR$/AaronCRM/settings.py" />
         <option value="$PROJECT_DIR$/CRM/urls.py" />
         <option value="$PROJECT_DIR$/CRM/forms.py" />
         <option value="$PROJECT_DIR$/templates/crm/contract_audit.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/CRM/kingadmin.py" />
-        <option value="$PROJECT_DIR$/CRM/models.py" />
         <option value="$PROJECT_DIR$/CRM/views.py" />
+        <option value="$PROJECT_DIR$/AaronCRM/settings.py" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/CRM/admin.py" />
+        <option value="$PROJECT_DIR$/CRM/models.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="45" />
-    <option name="y" value="122" />
-    <option name="width" value="1298" />
-    <option name="height" value="950" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="83" />
+    <option name="y" value="-3" />
+    <option name="width" value="1605" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -255,6 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -270,7 +212,12 @@
             <path>
               <item name="AaronCRM" type="b2602c69:ProjectViewProjectNode" />
               <item name="AaronCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="CRM" type="462c0819:PsiDirectoryNode" />
+              <item name="KingAdmin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AaronCRM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AaronCRM" type="462c0819:PsiDirectoryNode" />
+              <item name="statics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AaronCRM" type="b2602c69:ProjectViewProjectNode" />
@@ -282,17 +229,10 @@
               <item name="AaronCRM" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="AaronCRM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AaronCRM" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="crm" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,22 +240,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="D:/新建文件夹/python全栈3期-课件与源码/python全栈3期-课件与源码/day84源码" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Code\AaronCRM\AaronCRM" />
-      <recent name="D:\Code\AaronCRM\templates\crm" />
-      <recent name="D:\Code\AaronCRM\KingAdmin\templates\kingadmin" />
-      <recent name="D:\Code\AaronCRM\Student" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\AaronCRM\templates" />
       <recent name="D:\Code\AaronCRM" />
       <recent name="D:\Code\AaronCRM\KingAdmin\statics\fonts" />
       <recent name="D:\Code\AaronCRM\KingAdmin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\AaronCRM\AaronCRM" />
+      <recent name="D:\Code\AaronCRM\templates\crm" />
+      <recent name="D:\Code\AaronCRM\KingAdmin\templates\kingadmin" />
+      <recent name="D:\Code\AaronCRM\Student" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -372,38 +312,39 @@
       <workItem from="1572834504137" duration="36388000" />
       <workItem from="1573005254110" duration="37828000" />
       <workItem from="1573178498262" duration="5152000" />
+      <workItem from="1573614328092" duration="8232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121886000" />
+    <option name="totallyTimeSpent" value="130152000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-257" y="77" width="1038" height="760" extended-state="1" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22959183" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.24963072" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865952" visible="true" weight="0.1883378" />
+      <window_info id="Structure" order="1" sideWeight="0.5013405" side_tool="true" weight="0.11930295" />
+      <window_info id="Favorites" order="2" sideWeight="0.50124687" side_tool="true" weight="0.11930295" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.4155496" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.106687896" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.6193029" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.2855228" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.25737265" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32894737" />
-      <window_info anchor="right" id="Database" order="4" weight="0.17426273" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.16957104" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24761905" />
@@ -434,40 +375,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/KingAdmin/templates/kingadmin/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Student/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Student/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Student/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/template/library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2186">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/string.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="300" column="26" lean-forward="true" selection-start-line="300" selection-start-column="26" selection-end-line="300" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2f59475f-3978-4a9e-9f65-5f84164dc18a/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -478,15 +385,7 @@
     <entry file="file://$PROJECT_DIR$/KingAdmin/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://2f59475f-3978-4a9e-9f65-5f84164dc18a/schema/main/table/CRM_customerinfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="5c44c0f9-c333-4035-bb2d-a4d2aee29560">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://2f59475f-3978-4a9e-9f65-5f84164dc18a/schema/main/table/CRM_customerinfo" />
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1260278458/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -642,32 +541,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://2f59475f-3978-4a9e-9f65-5f84164dc18a/schema/main/table/CRM_menus">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="80c81d4e-8e03-44e0-8505-61cb4c5ff7df">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://2f59475f-3978-4a9e-9f65-5f84164dc18a/schema/main/table/CRM_menus" />
     <entry file="file://$PROJECT_DIR$/KingAdmin/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CRM/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#602#718#0" />
           </folding>
         </state>
       </provider>
@@ -695,13 +575,6 @@
           <folding>
             <element signature="e#632#664#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AaronCRM/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
         </state>
       </provider>
     </entry>
@@ -777,17 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CRM/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#458#628#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CRM/kingadmin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -804,6 +666,83 @@
           <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/base_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1407">
+          <caret line="122" column="36" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/forms/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4016">
+          <caret line="265" selection-start-line="265" selection-end-line="265" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AaronCRM/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3792">
+          <caret line="381" lean-forward="true" selection-start-line="381" selection-end-line="381" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#84#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/apps/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="210" selection-start-line="210" selection-end-line="210" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2ea13595-d3d0-478f-a26e-0a6bc59a1deb/schema/main/table/CRM_userprofile">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="f9281fd6-663f-4585-8339-3bf33a375a8f">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="83" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#278#1108#0" />
+            <element signature="e#1170#2341#0" />
+            <element signature="e#458#628#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CRM/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="51" column="27" lean-forward="true" selection-end-line="130" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

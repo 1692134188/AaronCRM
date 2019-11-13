@@ -1,17 +1,87 @@
 from django.db import models
-# 注意，这里我们使用django  admin 中的user表
-from django.contrib.auth.admin import User
-
+from django.contrib.auth.models import User
 
 # Create your models here.
-class UserProfile(models.Model):
-    """用户信息表"""
-    user = models.OneToOneField(User,on_delete=None)
+
+from django.db import models
+from django.contrib.auth.models import (
+    BaseUserManager, AbstractBaseUser,PermissionsMixin
+)
+
+
+class UserProfileManager(BaseUserManager):
+    def create_user(self, email, name, password=None):
+        """
+        Creates and saves a User with the given email, date of
+        birth and password.
+        """
+        if not email:
+            raise ValueError('Users must have an email address')
+
+        user = self.model(
+            email=self.normalize_email(email),
+            name=name,
+        )
+
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_superuser(self, email, name, password):
+        """
+        Creates and saves a superuser with the given email, date of
+        birth and password.
+        """
+        user = self.create_user(
+            email,
+            password=password,
+            name=name,
+        )
+        user.is_superuser = True
+        user.save(using=self._db)
+        return user
+
+
+class UserProfile(AbstractBaseUser, PermissionsMixin):
+    email = models.EmailField(
+        verbose_name='email address',
+        max_length=255,
+        unique=True,
+
+    )
     name = models.CharField(max_length=64, verbose_name="姓名")
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=True)
+    #is_admin = models.BooleanField(default=False)
     role = models.ManyToManyField("Role", blank=True, null=True)
 
-    def __str__(self):  # __unicode__
-        return self.name
+    objects = UserProfileManager()
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['name']
+
+    def get_full_name(self):
+        # The user is identified by their email address
+        return self.email
+
+    def get_short_name(self):
+        # The user is identified by their email address
+        return self.email
+
+    def __str__(self):              # __unicode__ on Python 2
+        return self.email
+
+
+    class Meta:
+        permissions = (
+            ('crm_table_list', '可以查看kingadmin每张表里所有的数据'),
+            ('crm_table_list_view', '可以访问kingadmin表里每条数据的修改页'),
+            ('crm_table_list_change', '可以对kingadmin表里的每条数据进行修改'),
+            ('crm_table_obj_add_view', '可以访问kingadmin每张表的数据增加页'),
+            ('crm_table_obj_add', '可以对kingadmin每张表进行数据添加'),
+
+        )
+
 
 class Role(models.Model):
     """角色表"""
