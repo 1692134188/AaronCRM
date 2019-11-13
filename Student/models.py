@@ -1,8 +1,8 @@
 from django.db import models
 
+from CRM.models import User,UserProfile,CustomerInfo
+
 # Create your models here.
-class Test(models.Model):
-    """测试表"""
-    name = models.CharField(max_length=64, unique=True)
-    def __str__(self):
-        return self.name
+class Account(models.Model):
+    account = models.OneToOneField(User,related_name="stu_account",on_delete=None)
+    profile = models.OneToOneField(CustomerInfo,on_delete=None)
