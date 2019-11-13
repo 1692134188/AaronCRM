@@ -74,11 +74,11 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
     class Meta:
         permissions = (
-            ('crm_table_list', '可以查看kingadmin每张表里所有的数据'),
-            ('crm_table_list_view', '可以访问kingadmin表里每条数据的修改页'),
-            ('crm_table_list_change', '可以对kingadmin表里的每条数据进行修改'),
-            ('crm_table_obj_add_view', '可以访问kingadmin每张表的数据增加页'),
-            ('crm_table_obj_add', '可以对kingadmin每张表进行数据添加'),
+            ('CRM_table_list', '可以查看kingadmin每张表里所有的数据'),
+            ('CRM_table_list_view', '可以访问kingadmin表里每条数据的修改页'),
+            ('CRM_table_list_change', '可以对kingadmin表里的每条数据进行修改'),
+            ('CRM_table_obj_add_view', '可以访问kingadmin每张表的数据增加页'),
+            ('CRM_table_obj_add', '可以对kingadmin每张表进行数据添加'),
 
         )
 

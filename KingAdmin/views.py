@@ -5,6 +5,7 @@ from django.core.paginator import Paginator
 from django.db.models import Q
 from KingAdmin import app_setup,form_handle
 from KingAdmin.sites import site
+from KingAdmin import permissions
 import json
 app_setup.kingadmin_auto_discover()
 
@@ -53,6 +54,7 @@ def get_serached_result(request, querysets, admin_class):
 
         return querysets.filter(q)
     return querysets
+@permissions.check_permission
 @login_required
 def table_obj_list(request, app_name, model_name):
     # 取出指定model里的数据返回给前端
@@ -89,7 +91,7 @@ def table_obj_list(request, app_name, model_name):
     page = request.GET.get('_page')
     querysets = paginator.get_page(page)
     return render(request, 'kingadmin/table_obj_list.html', locals())
-
+@permissions.check_permission
 @login_required
 def table_obj_change(request, app_name, model_name,obj_id):
     # Q1:此方法的作用是？
@@ -108,6 +110,7 @@ def table_obj_change(request, app_name, model_name,obj_id):
            form_obj.save()
            return redirect("/kingadmin/%s/%s/" %(app_name,model_name))
     return  render(request,'kingadmin/table_obj_change.html',locals())
+@permissions.check_permission
 @login_required
 def table_obj_add(request,app_name,model_name):
     # Q1:此方法的作用是？
@@ -126,6 +129,7 @@ def table_obj_add(request,app_name,model_name):
             return redirect("/kingadmin/%s/%s/" % (app_name, model_name))
 
     return render(request,'kingadmin/table_obj_add.html',locals())
+@permissions.check_permission
 @login_required
 def table_obj_delete(request,app_name,model_name,obj_id):
     # Q1:此方法的作用是？
